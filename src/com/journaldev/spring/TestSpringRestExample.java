@@ -10,7 +10,7 @@ import com.journaldev.spring.model.Employee;
  
 public class TestSpringRestExample {
  
-    public static final String SERVER_URI = "http://localhost:9090/spring-rest-example";
+    public static final String SERVER_URI = "http://localhost:8080/spring-rest-example";
      
     public static void main(String args[]){
          
