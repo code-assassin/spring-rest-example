@@ -9,7 +9,7 @@
 <body>
 
 <%
-String uri = "http://localhost:9090/spring-rest-example";
+String uri = "http://localhost:8080/spring-rest-example";
 org.springframework.web.client.RestTemplate restTemplate = new org.springframework.web.client.RestTemplate();
 com.journaldev.spring.model.Employee emp = restTemplate.getForObject(uri+"/rest/emp/dummy", com.journaldev.spring.model.Employee.class);
 %>
