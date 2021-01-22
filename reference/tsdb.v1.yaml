@@ -638,6 +638,13 @@ paths:
                         strTeamBanner: null
                         strYoutube: ''
                         strLocked: unlocked
+            application/xml:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1:
+                  value: {}
         '400':
           description: Bad Request
         '404':
