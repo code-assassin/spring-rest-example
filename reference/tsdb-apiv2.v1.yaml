@@ -27,14 +27,14 @@ paths:
   /searchteams.php:
     parameters: []
     get:
-      summary: Get Teams by Name
+      summary: Get Teams by Name 
+      x-code-samples:
+        - lang: Shell
+          source: 'curl -vk "https://apiumbrella.example.com/sport-api/searchteams.php?t=Arsenal&api_key=<api-key>"'
       tags: []
       responses:
         '200':
           description: Teams Found
-          x-code-samples:
-            - lang: Shell
-              source: curl -vk "https://apiumbrella.example.com/sport-api/searchteams.php?t=Arsenal&api_key=<api-key>" 
           schema:
             description: ''
             
@@ -732,13 +732,13 @@ paths:
   /search_all_leagues.php:
     get:
       summary: Search All Leagues
+      x-code-samples:
+        - lang: Shell
+          source: 'curl -vk "https://apiumbrella.example.com/sport-api/search_all_leagues.php?c=England&s=Soccer&api_key=<api-key>"'
       operationId: search-all-leagues
       responses:
         '200':
           description: OK 
-          x-code-samples:
-            - lang: Shell
-              source: curl -vk "https://apiumbrella.example.com/sport-api/search_all_leagues.php?c=England&s=Soccer&api_key=<api-key>" 
           schema:
             description: ''
             type: object
@@ -1325,14 +1325,14 @@ paths:
     parameters: []
   /searchevents.php:
     get:
-      summary: Your GET endpoint
+      summary: Your GET endpoint 
+      x-code-samples:
+        - lang: Shell
+          source: 'curl -vk "https://apiumbrella.example.com/sport-api/searchevents.php?e=Arsenal_vs_Chelsea&s=2016-2017&api_key=<api-key>"'
       tags: []
       responses:
         '200':
           description: OK 
-          x-code-samples:
-            - lang: Shell
-              source: curl -vk "https://apiumbrella.example.com/sport-api/searchevents.php?e=Arsenal_vs_Chelsea&s=2016-2017&api_key=<api-key>" 
           schema:
             description: ''
             type: object
