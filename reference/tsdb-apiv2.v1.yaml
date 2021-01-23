@@ -1,7 +1,14 @@
 swagger: '2.0'
+swagger_raw:
+  name: swagger_raw
+  filter: ^(.*)
 info:
   title: tsdb-apiv2.v1
   version: '1.0'
+  x-logo:
+    url: "https://www.thesportsdb.com/images/logo32.png"
+    backgroundColor: "#212121"
+    altText: "The Sport DB logo"
   contact:
     name: Bagas Adi Pamungkas
     email: bagas.pamungkas@i-3.co.id
@@ -26,7 +33,7 @@ paths:
         '200':
           description: Teams Found
           x-code-samples:
-            - lang: 'Shell'
+            - lang: Shell
               source: curl -vk "https://apiumbrella.example.com/sport-api/searchteams.php?t=Arsenal&api_key=<api-key>" 
           schema:
             description: ''
@@ -730,7 +737,7 @@ paths:
         '200':
           description: OK 
           x-code-samples:
-            - lang: 'Shell'
+            - lang: Shell
               source: curl -vk "https://apiumbrella.example.com/sport-api/search_all_leagues.php?c=England&s=Soccer&api_key=<api-key>" 
           schema:
             description: ''
@@ -1324,7 +1331,7 @@ paths:
         '200':
           description: OK 
           x-code-samples:
-            - lang: 'Shell'
+            - lang: Shell
               source: curl -vk "https://apiumbrella.example.com/sport-api/searchevents.php?e=Arsenal_vs_Chelsea&s=2016-2017&api_key=<api-key>" 
           schema:
             description: ''
