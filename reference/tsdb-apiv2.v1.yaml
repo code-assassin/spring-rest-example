@@ -23,6 +23,14 @@ produces:
   - application/json
 consumes:
   - application/json
+
+securityDefinitions:
+  api_key:
+    description: |
+      You need api key `api_key` to use this API which you can get by <a href="https://apiumbrella.example.com/signup">signup</a>.
+    type: apiKey
+    name: api_key
+    in: query
 paths:
   /searchteams.php:
     parameters: []
