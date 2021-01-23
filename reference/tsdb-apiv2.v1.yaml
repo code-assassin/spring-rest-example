@@ -6,7 +6,10 @@ info:
     name: Bagas Adi Pamungkas
     email: bagas.pamungkas@i-3.co.id
     url: 'https://i-3.co.id'
-host: www.thesportsdb.com
+  description: |
+    # Description
+    This is an example of The Sports DB API
+host: apiumbrella.example.com
 schemes:
   - https
 produces:
@@ -17,7 +20,7 @@ paths:
   /searchteams.php:
     parameters: []
     get:
-      summary: Get User Info by User ID
+      summary: Get Teams by Name
       tags: []
       responses:
         '200':
@@ -258,7 +261,7 @@ paths:
             required:
               - teams
           examples:
-            Get Team Arsenal:
+            Get Team Arsenal from t params:
               teams:
                 - idTeam: '133604'
                   idSoccerXML: '9'
@@ -638,143 +641,983 @@ paths:
                   strTeamBanner: null
                   strYoutube: ''
                   strLocked: unlocked
-        '404':
-          description: User Not Found
-          schema:
-            type: 'null'
-          examples: {}
+            Get Team Arsenal from sname params:
+              teams:
+                - idTeam: '133604'
+                  idSoccerXML: '9'
+                  idAPIfootball: '42'
+                  intLoved: '3'
+                  strTeam: Arsenal
+                  strTeamShort: Ars
+                  strAlternate: 'Gunners, Arsenal Football Club, AFC'
+                  intFormedYear: '1892'
+                  strSport: Soccer
+                  strLeague: English Premier League
+                  idLeague: '4328'
+                  strLeague2: UEFA Europa League
+                  idLeague2: '4481'
+                  strLeague3: FA Cup
+                  idLeague3: '4482'
+                  strLeague4: EFL Cup
+                  idLeague4: '4570'
+                  strLeague5: FA Community Shield
+                  idLeague5: '4571'
+                  strLeague6: ''
+                  idLeague6: null
+                  strLeague7: ''
+                  idLeague7: null
+                  strDivision: null
+                  strManager: ''
+                  strStadium: Emirates Stadium
+                  strKeywords: 'Gunners, Gooners'
+                  strRSS: 'https://www.allarsenal.com/feed/'
+                  strStadiumThumb: 'https://www.thesportsdb.com/images/media/team/stadium/w1anwa1588432105.jpg'
+                  strStadiumDescription: "The Emirates Stadium (known as Ashburton Grove prior to sponsorship, and as Arsenal Stadium for UEFA competitions) is a football stadium in Holloway, London, England, and the home of Arsenal. With a capacity of 60,704 it is the fourth-largest football stadium in England after Wembley Stadium, Old Trafford and Tottenham Hotspur Stadium.\r\n\r\nIn 1997, Arsenal explored the possibility of relocating to a new stadium, having been denied planning permission by Islington Council to expand its home stadium, Highbury. After considering various options (including purchasing Wembley Stadium), the club bought an industrial and waste disposal estate in Ashburton Grove in 2000. A year later, they received the council's approval to build a stadium on the site; manager Arsène Wenger described this as the \"biggest decision in Arsenal's history\" since the board appointed Herbert Chapman. Relocation began in 2002, but financial difficulties delayed work until February 2004. Emirates was later announced as the main sponsor for the stadium. The entire stadium project was completed in 2006 at a cost of £390 million. The club's former stadium was redeveloped as Highbury Square, an apartment complex.\r\n\r\nThe stadium has undergone a process of \"Arsenalisation\" since 2009 with the aim of restoring Arsenal's heritage and history. The stadium has hosted international fixtures and music concerts."
+                  strStadiumLocation: 'Holloway, London'
+                  intStadiumCapacity: '60338'
+                  strWebsite: www.arsenal.com
+                  strFacebook: www.facebook.com/Arsenal
+                  strTwitter: twitter.com/arsenal
+                  strInstagram: instagram.com/arsenal
+                  strDescriptionEN: "Arsenal Football Club is a professional football club based in Islington, London, England, that plays in the Premier League, the top flight of English football. The club has won 13 League titles, a record 13 FA Cups, 2 League Cups, 15 FA Community Shields, 1 League Centenary Trophy, 1 UEFA Cup Winners' Cup and 1 Inter-Cities Fairs Cup.\r\n\r\nArsenal was the first club from the South of England to join The Football League, in 1893, and they reached the First Division in 1904. Relegated only once, in 1913, they continue the longest streak in the top division, and have won the second-most top-flight matches in English football history. In the 1930s, Arsenal won five League Championships and two FA Cups, and another FA Cup and two Championships after the war. In 1970–71, they won their first League and FA Cup Double. Between 1989 and 2005, they won five League titles and five FA Cups, including two more Doubles. They completed the 20th century with the highest average league position.\r\n\r\nHerbert Chapman won Arsenal's first national trophies, but died prematurely. He helped introduce the WM formation, floodlights, and shirt numbers, and added the white sleeves and brighter red to the club's kit. Arsène Wenger was the longest-serving manager and won the most trophies. He won a record 7 FA Cups, and his title-winning team set an English record for the longest top-flight unbeaten league run at 49 games between 2003 and 2004, receiving the nickname The Invincibles.\r\n\r\nIn 1886, Woolwich munitions workers founded the club as Dial Square. In 1913, the club crossed the city to Arsenal Stadium in Highbury, becoming close neighbours of Tottenham Hotspur, and creating the North London derby. In 2006, they moved to the nearby Emirates Stadium. In terms of revenue, Arsenal is the ninth highest-earning football club in the world, earned €487.6m in 2016–17 season. Based on social media activity from 2014 to 2015, Arsenal's fanbase is the fifth largest in the world. In 2018, Forbes estimated the club was the third most valuable in England, with the club being worth $2.24 billion."
+                  strDescriptionDE: 'Der FC Arsenal (offiziell: Arsenal Football Club) – auch bekannt als (The) Arsenal, (The) Gunners (deutsche Übersetzung: „Schützen“ oder „Kanoniere“) oder im deutschen Sprachraum auch Arsenal London genannt – ist ein 1886 gegründeter Fußballverein aus dem Ortsteil Holloway des Nordlondoner Bezirks Islington. Mit 13 englischen Meisterschaften und elf FA-Pokalsiegen zählt der Klub zu den erfolgreichsten englischen Fußballvereinen.Erst über 40 Jahre nach der Gründung gewann Arsenal mit fünf Ligatiteln und zwei FA Cups in den 1930er Jahren seine ersten bedeutenden Titel. Der nächste Meilenstein war in der Saison 1970/71 der Gewinn des zweiten englischen „Doubles“ im 20. Jahrhundert. In den vergangenen 20 Jahren etablierte sich Arsenal endgültig als einer der erfolgreichsten englischen Fußballvereine, und beim Gewinn zweier weiterer Doubles zu Beginn des 21. Jahrhunderts blieb die Mannschaft in der Ligasaison 2003/04 als zweite in der englischen Fußballgeschichte ungeschlagen. Zunehmende europäische Ambitionen unterstrich der Verein in der Spielzeit 2005/06, als Arsenal als erster Londoner Verein das Finale der Champions League erreichte.'
+                  strDescriptionFR: "Arsenal Football Club est un club de football anglais fondé le 1er décembre 1886 à Londres. Son siège est situé dans le borough londonien d'Islington.\r\n\r\nArsenal participe au championnat d'Angleterre de football depuis 1919 dont il a remporté treize éditions, ce qui en fait le troisième club le plus titré d'Angleterre, ainsi que treize coupes d'Angleterre ce qui constitue un record (devant Manchester United, qui en a remporté 12). Sur le plan continental, les Gunners (en français : « les canonniers ») comptent à leur palmarès une Coupe d'Europe des vainqueurs de coupe obtenue en 1994. Deux fois finalistes de cette coupe des vainqueurs de coupe en 1980 et 1995, ils ont également atteint les finales de la coupe de l'UEFA en 2000, de la Ligue des champions en 2006 et de l'Europa League en 2019.\r\n\r\nRésident dès 1913 du stade de Highbury, situé dans un quartier du nord de Londres, le club s’est installé en 2006 dans une nouvelle enceinte de 60 355 places : l'Emirates Stadium, situé à Ashburton Grove. Arsenal nourrit une certaine rivalité avec les nombreux autres clubs de la capitale, mais celle l'opposant à Tottenham Hotspur, avec qui il dispute chaque année le « North London derby » est particulièrement ancienne et profonde.\r\n\r\nLe club est dirigé par Chips Keswick (en) qui succède pour raisons de santé en juin 2013 à Peter Hill-Wood, fils et petit-fils des anciens présidents Denis et Samuel Hill-Wood. Il remplace son père à la mort de ce dernier, en 1982, après vingt ans de responsabilités. Son entraîneur depuis le 29 novembre 2019 est le Suédois Fredrik Ljungberg, ancien joueur du club, après le limogeage de l’Espagnol Unai Emery. Cependant le 20 décembre 2019, l'Espagnol Mikel Arteta, lui aussi ancien joueur du club, est nommé entraîneur. Il était avant sa nomination l'assistant de Pep Guardiola à Manchester City"
+                  strDescriptionCN: null
+                  strDescriptionIT: "L'Arsenal Football Club, noto semplicemente come Arsenal, è una società calcistica inglese con sede a Londra, più precisamente nel quartiere di Holloway, nel borgo di Islington.[3]\r\n\r\nFondato nel 1886, è uno dei quattordici club che rappresentano la città di Londra a livello professionistico,[4] nonché uno dei più antichi del Paese. Milita nella massima serie del calcio inglese ininterrottamente dal 1919-1920, risultando quindi la squadra da più tempo presente in First Division/Premier League. È la prima squadra della capitale del Regno Unito per successi sportivi e, in ambito federale, la terza dopo Manchester United e Liverpool, essendosi aggiudicata nel corso della sua storia tredici campionati inglesi, dodici FA Cup (record di vittorie, condiviso con il Manchester United), due League Cup e quattordici Community Shield (una condivisa),[5] mentre in ambito internazionale ha conquistato una Coppa delle Coppe ed una Coppa delle Fiere. Inoltre è una delle tredici squadre che hanno raggiunto le finali di tutte le tre principali competizioni gestite dalla UEFA: Champions League (2005-2006), Coppa UEFA (1999-2000) e Coppa delle Coppe (1979-1980, 1993-1994 e 1994-1995).[6]\r\n\r\nI colori sociali, rosso per la maglietta e bianco per i pantaloncini, hanno subìto variazioni più o meno evidenti nel corso degli anni. Anche la sede del club è stata cambiata più volte: inizialmente la squadra giocava a Woolwich, ma nel 1913 si spostò all'Arsenal Stadium, nel quartiere di Highbury; dal 2006 disputa invece le sue partite casalinghe nel nuovo Emirates Stadium. Lo stemma è stato modificato ripetutamente, ma al suo interno è sempre comparso almeno un cannone. Proprio per questo motivo i giocatori ed i tifosi dell'Arsenal sono spesso soprannominati Gunners (in italiano \"cannonieri\").\r\n\r\nL'Arsenal conta su una schiera di tifosi molto nutrita, distribuita in ogni parte del mondo. Nel corso degli anni sono sorte profonde rivalità con i sostenitori di club concittadini, la più sentita delle quali è quella con i seguaci del Tottenham Hotspur, con i quali i Gunners giocano regolarmente il North London derby.[7] L'Arsenal è anche uno dei club più ricchi del mondo, con un patrimonio stimato di 1,3 miliardi di dollari, secondo la rivista Forbes nel 2014, facendone il quinto club più ricco del pianeta e il secondo in Inghilterra.[8]"
+                  strDescriptionJP: "アーセナル・フットボール・クラブ（Arsenal Football Club、イギリス英語発音: [ˈɑːsənl ˈfutˌbɔːl klʌb]）は、イングランドの首都ロンドン北部をホームタウンとする、イングランドプロサッカーリーグ（プレミアリーグ）に加盟するプロサッカークラブ。クラブカラーは赤と白。\r\n\r\n現在のホームスタジアムはロンドンのエミレーツ・スタジアム（収容人数60,260人）。プレミアリーグに所属し、同リーグにおいて3回の優勝記録を持つ（フットボールリーグ時代を含めると13回）。2003-2004シーズンには無敗優勝を達成したイングランド屈指の強豪である。1886年に軍需工場の労働者のクラブとして創設されたため、チームのエンブレムは大砲のマークを持つ。「ガナーズ（Gunners）」の愛称で知られ[1]、サポーターは「グーナー（Gooner）」と呼ばれる。\r\n\r\nクラブのモットーは「勝利は調和の中から生まれる（ラテン語: Victoria Concordia Crescit）」。1949年から使用されたクレストに初めて登場する。現行のクレストは2002年から使用されており、大砲の上にサンセリフ体でチーム名が書かれている。"
+                  strDescriptionRU: "«Арсена́л» (официальное полное название — Футбольный клуб «Арсенал», англ. Arsenal Football Club, английское произношение: [ˈɑrsənəl 'futbɔ:l klʌb]) — английский профессиональный футбольный клуб из Северного Лондона, выступающий в Премьер-лиге. Основан в октябре 1886 года. Клуб 13 раз становился чемпионом Англии, 13 раз выигрывал Кубок Англии. Домашним стадионом клуба является Эмирейтс, вмещающий 60 704 зрителей[1].\r\n\r\n«Арсенал» провёл бо́льшую часть своей истории в высшем дивизионе английского футбола, в 1892 году стал одним из клубов-основателей английской Премьер-лиги[4]. Также клуб является рекордсменом по количеству сезонов подряд, проведённых в высшем дивизионе чемпионата Англии, начиная с 1919 года[5].\r\n\r\nПо данным Forbes на 2018 год, «Арсенал» занимал шестое место в списке самых дорогих футбольных клубов мира и оценивался в сумму 2,238 млрд. долларов США[6]. По данным аудиторской компании Deloitte, по итогам сезона 2016/17 «Арсенал» занимал 6-ю строчку в рейтинге самых доходных футбольных клубов с доходом в размере 487,6 млн евро[7]."
+                  strDescriptionES: "El Arsenal Football Club (pronunciación en inglés: /ˈɑː(ɹ)sənəl ˈfʊtˌbɔl klʌb/) es un club de fútbol profesional con sede en Holloway, Londres, Inglaterra, que juega en la máxima categoría del fútbol de ese país, la Premier League. Uno de los más laureados del fútbol inglés, ha ganado 43 títulos en su país, incluyendo 13 campeonatos de liga y un récord de 13 Copas de Inglaterra; también ha ganado dos títulos internacionales: la Copa europea de Ferias en 1970 y la Recopa de Europa en 1994.\r\n\r\nFundado en 1886 en el sudeste de Londres, en 1893, se convirtió en el primer club del sur de Inglaterra en unirse a la Football League. Ganó sus primeros títulos —cinco ligas y dos FA Cups— en los años 1930. Luego de un período de escasez en los años posteriores a la Segunda Guerra Mundial, se convirtió en el segundo club del siglo XX en ganar el doblete, obteniendo el Campeonato de Liga y la FA Cup de la temporada 1970-71. Los logros siguieron en los años 1990 y 2000. Durante esos años, Arsenal ganó un doblete de copas nacionales, dos dobletes de Liga y Copa, y dos bicampeonatos de la Copa de Inglaterra. Finalizó una temporada de Liga invicto y se convirtió en el primer club de Londres en llegar a la final de la Liga de Campeones de la UEFA.\r\n\r\nLos colores tradicionales del club, el blanco y el rojo, han evolucionado con el tiempo. Del mismo modo, fue cambiando la ubicación del club; fundado en el distrito de Woolwich, en el sureste de Londres, en 1913 se mudó al norte de Londres, más exactamente en el distrito de Highbury, donde fue establecido el Arsenal Stadium, que funcionó hasta 2006, donde se hizo un traslado más corto, hacia los alrededores de Holloway, donde se levantó el actual Emirates Stadium. La estadía histórica del Arsenal en el norte de Londres, ha creado con el tiempo una fuerte rivalidad con el Tottenham Hotspur, conocida como el Derbi del Norte de Londres.4​\r\n\r\nArsenal posee una de las aficiones más numerosas del mundo.5​6​7​ Según la revista Forbes, el club fue el quinto club más valioso del mundo en 2014, con un valor de 1300 millones libras.8​"
+                  strDescriptionPT: "Arsenal Football Club é um clube de futebol, fundado e baseado em Londres, capital da Inglaterra.\r\n\r\nO clube disputa a Premier League e é um dos mais bem sucedidos do futebol inglês, tendo ganhado por 13 vezes o título de campeão do Campeonato Inglês, sendo o terceiro em número de conquistas, e por 13 vezes a Copa da Inglaterra (recorde), sendo também detentor do recorde de maior período de invencibilidade no Campeonato Inglês e também o de ser o único a ganhar a Premier League invicto. No plano internacional, conquistou a Recopa Europeia e a Taça das Cidades com Feiras, já tendo sido finalista da Liga dos Campeões da UEFA, a principal competição europeia de clubes.\r\n\r\nO Arsenal mudou de localização ao longo do tempo, tendo sido fundado em Woolwich, sudeste de Londres, em 1913 mudou-se para o norte de Londres, para o Arsenal Stadium, em Highbury. Em 2006 foi concluída a construção do Emirates Stadium, que está localizado nas proximidades de Holloway, o que foi prometido desde 2004, após o clube fechar negócio com a Emirates Airlines, tendo capacidade para mais de 60.000 expectadores.[3]\r\n\r\nO Arsenal tem muitos torcedores por todo mundo, possuindo uma série de rivalidades de longa data com outros clubes, sendo a mais notável delas contra os vizinhos do Tottenham, com quem disputa regularmente o North London Derby, bastante intensas também contra o Chelsea e o Manchester United.[4]\r\n\r\nSuas cores têm sido tradicionalmente vermelho e branco, mas seus uniformes evoluíram ao longo da história. Um outro grande feito é o de ser um dos 5 únicos clubes do mundo que já venceram a Seleção Brasileira.[5] Já o Arsenal Ladies, é um dos clubes mais bem sucedidos do futebol feminino na Inglaterra."
+                  strDescriptionSE: null
+                  strDescriptionNL: null
+                  strDescriptionHU: null
+                  strDescriptionNO: 'Arsenal Football Club er en engelsk fotballklubb som spiller i Premier League. Klubben ble stiftet i 1886, og ble valgt inn i The Football League i 1893. «The Gunners», som er kallenavnet til Arsenal, spiller hjemmekampene sine på Emirates Stadium i Holloway. Holloway er et sted i bydelen Islington som ligger i det nordlige London.'
+                  strDescriptionIL: null
+                  strDescriptionPL: null
+                  strGender: Male
+                  strCountry: England
+                  strTeamBadge: 'https://www.thesportsdb.com/images/media/team/badge/a1af2i1557005128.png'
+                  strTeamJersey: 'https://www.thesportsdb.com/images/media/team/jersey/mpintc1586884343.png'
+                  strTeamLogo: 'https://www.thesportsdb.com/images/media/team/logo/q2mxlz1512644512.png'
+                  strTeamFanart1: 'https://www.thesportsdb.com/images/media/team/fanart/xyusxr1419347566.jpg'
+                  strTeamFanart2: 'https://www.thesportsdb.com/images/media/team/fanart/qttspr1419347612.jpg'
+                  strTeamFanart3: 'https://www.thesportsdb.com/images/media/team/fanart/uwssqx1420884450.jpg'
+                  strTeamFanart4: 'https://www.thesportsdb.com/images/media/team/fanart/qtprsw1420884964.jpg'
+                  strTeamBanner: 'https://www.thesportsdb.com/images/media/team/banner/rtpsrr1419351049.jpg'
+                  strYoutube: www.youtube.com/user/ArsenalTour
+                  strLocked: unlocked
+          headers: {}
       operationId: get-teams-by-name
-      description: Retrieve the information of the user with the matching user ID.
+      description: Retrieve the information of the teams with the matching team name.
       parameters:
         - type: string
           in: query
           name: t
-          description: team name
-    patch:
-      summary: Update User Information
-      operationId: patch-users-userId
+          description: 'Team Name. Example : t=Arsenal'
+        - in: formData
+          type: string
+          name: t
+          description: Team Name
+        - in: formData
+          type: string
+          name: sname
+          description: 'Team Short Code '
+        - type: string
+          in: query
+          name: sname
+          description: 'Team Short Code. Example : sname=Ars'
+  /search_all_leagues.php:
+    get:
+      summary: ''
+      operationId: search-all-leagues
       responses:
         '200':
-          description: User Updated
+          description: OK
           schema:
-            $ref: '#/definitions/User'
-          examples:
-            Update User Rebecca Baker:
-              id: 13
-              firstName: Rebecca
-              lastName: Baker
-              email: rebecca@gmail.com
-              dateOfBirth: '1985-10-02'
-              emailVerified: false
-              createDate: '2019-08-24'
-        '404':
-          description: User Not Found
-          schema:
-            type: 'null'
-        '409':
-          description: Email Already Taken
-          schema:
-            type: 'null'
-      description: Update the infromation of an existing user.
-      parameters:
-        - in: body
-          name: body
-          schema:
+            description: ''
             type: object
             properties:
-              firstName:
-                type: string
-              lastName:
-                type: string
-              email:
-                type: string
-                description: 'If a new email is given, the user''s email verified property will be set to false.'
-              dateOfBirth:
-                type: string
-          description: Patch user properties to update.
-          x-examples:
-            Update First Name:
-              firstName: Rebecca
-            Update Email:
-              email: rebecca@gmail.com
-            Update Last Name & Date of Birth:
-              lastName: Baker
-              dateOfBirth: '1985-10-02'
-  /user:
-    post:
-      summary: Create New User
-      operationId: post-user
-      responses:
-        '200':
-          description: User Created
-          schema:
-            $ref: '#/definitions/User'
-        '400':
-          description: Missing Required Information
-          schema:
-            type: 'null'
-        '409':
-          description: Email Already Taken
-          schema:
-            type: 'null'
-      description: Create a new user.
-      parameters:
-        - in: body
-          name: body
-          schema:
-            type: object
-            properties:
-              firstName:
-                type: string
-              lastName:
-                type: string
-              email:
-                type: string
-              dateOfBirth:
-                type: string
-                format: date
+              countrys:
+                type: array
+                uniqueItems: true
+                minItems: 1
+                items:
+                  required:
+                    - idLeague
+                    - idAPIfootball
+                    - strSport
+                    - strLeague
+                    - strLeagueAlternate
+                    - strDivision
+                    - idCup
+                    - strCurrentSeason
+                    - intFormedYear
+                    - dateFirstEvent
+                    - strGender
+                    - strCountry
+                    - strWebsite
+                    - strFacebook
+                    - strTwitter
+                    - strYoutube
+                    - strRSS
+                    - strDescriptionEN
+                    - strBadge
+                    - strLogo
+                    - strNaming
+                    - strLocked
+                  properties:
+                    idLeague:
+                      type: string
+                      minLength: 1
+                    idSoccerXML: {}
+                    idAPIfootball:
+                      type: string
+                      minLength: 1
+                    strSport:
+                      type: string
+                      minLength: 1
+                    strLeague:
+                      type: string
+                      minLength: 1
+                    strLeagueAlternate:
+                      type: string
+                      minLength: 1
+                    strDivision:
+                      type: string
+                      minLength: 1
+                    idCup:
+                      type: string
+                      minLength: 1
+                    strCurrentSeason:
+                      type: string
+                      minLength: 1
+                    intFormedYear:
+                      type: string
+                      minLength: 1
+                    dateFirstEvent:
+                      type: string
+                      minLength: 1
+                    strGender:
+                      type: string
+                      minLength: 1
+                    strCountry:
+                      type: string
+                      minLength: 1
+                    strWebsite:
+                      type: string
+                      minLength: 1
+                    strFacebook:
+                      type: string
+                    strTwitter:
+                      type: string
+                    strYoutube:
+                      type: string
+                    strRSS:
+                      type: string
+                    strDescriptionEN:
+                      type: string
+                      minLength: 1
+                    strDescriptionDE: {}
+                    strDescriptionFR: {}
+                    strDescriptionIT: {}
+                    strDescriptionCN: {}
+                    strDescriptionJP: {}
+                    strDescriptionRU: {}
+                    strDescriptionES: {}
+                    strDescriptionPT: {}
+                    strDescriptionSE: {}
+                    strDescriptionNL: {}
+                    strDescriptionHU: {}
+                    strDescriptionNO: {}
+                    strDescriptionPL: {}
+                    strDescriptionIL: {}
+                    strFanart1: {}
+                    strFanart2: {}
+                    strFanart3: {}
+                    strFanart4: {}
+                    strBanner: {}
+                    strBadge:
+                      type: string
+                      minLength: 1
+                    strLogo:
+                      type: string
+                      minLength: 1
+                    strPoster: {}
+                    strTrophy: {}
+                    strNaming:
+                      type: string
+                      minLength: 1
+                    strComplete: {}
+                    strLocked:
+                      type: string
+                      minLength: 1
             required:
-              - firstName
-              - lastName
-              - email
-              - dateOfBirth
-          description: Post the necessary fields for the API to create a new user.
-          x-examples:
-            Create User Bob Fellow:
-              firstName: Bob
-              lastName: Fellow
-              email: bob.fellow@gmail.com
-              dateOfBirth: '1996-08-24'
-definitions:
-  User:
-    title: User
-    type: object
-    properties:
-      id:
-        type: integer
-        description: Unique identifier for the given user.
-      firstName:
-        type: string
-      lastName:
-        type: string
-      email:
-        type: string
-        format: email
-      dateOfBirth:
-        type: string
-        format: date
-        example: '1997-10-31'
-      emailVerified:
-        type: boolean
-        description: Set to true if the user's email has been verified.
-      createDate:
-        type: string
-        format: date
-        description: The date that the user was created.
-    required:
-      - id
-      - firstName
-      - lastName
-      - email
-      - emailVerified
-basePath: /api/v1/json/1/
+              - countrys
+          examples:
+            Example Soccer Leagues from England:
+              countrys:
+                - idLeague: '4847'
+                  idSoccerXML: null
+                  idAPIfootball: '2792'
+                  strSport: Soccer
+                  strLeague: EFL Trophy
+                  strLeagueAlternate: English Football League Trophy
+                  strDivision: '99'
+                  idCup: '1'
+                  strCurrentSeason: 2020-2021
+                  intFormedYear: '1983'
+                  dateFirstEvent: '2020-02-29'
+                  strGender: Male
+                  strCountry: England
+                  strWebsite: www.efl.com/efl-trophy
+                  strFacebook: ''
+                  strTwitter: ''
+                  strYoutube: ''
+                  strRSS: ''
+                  strDescriptionEN: "The EFL Trophy (English Football League Trophy) is an annual English association football knockout competition open to the 48 clubs in EFL League One and EFL League Two, the third and fourth tiers of the English football league system and, since the 2016–17 season, 16 under-21 sides from Premier League and EFL Championship clubs. It is the third most prestigious knockout trophy in English football after the FA Cup and EFL Cup.\r\n\r\nIt began in the 1983–84 season as the Associate Members' Cup, but in 1992, after the lower-division clubs became full members of the Football League, it was renamed the Football League Trophy. The competition replaced the short-lived Football League Group Cup. It was renamed again in 2016, as the EFL Trophy. The competition has been associated with a title sponsor since its second season: currently, it is known as the Leasing.com Trophy, having previously been the Checkatrade Trophy.\r\n\r\nThe first draws are made in August, then the competition runs as 16 regional groups, each containing four teams. The top two from each group qualify for the knockout stages before the two winners meet in late March or early April in the final at England's national stadium, Wembley. The basic north/south format of the competition has existed since its beginnings, with some Midlands clubs fluctuating between the north and south draws each season. Other details have varied over the years, including in some years inviting clubs from the semi-professional Conference Premier, and holding a round-robin group stage prior to moving into knockout rounds.\r\n\r\nThe current (2018–19) champions are Portsmouth, who beat Sunderland 5–4 on penalties in the 2019 final to win the competition for the first time. The most successful club is Bristol City, who have lifted the trophy three times, in 1986, 2003 and 2015, and were finalists in 1987 and 2000."
+                  strDescriptionDE: null
+                  strDescriptionFR: null
+                  strDescriptionIT: null
+                  strDescriptionCN: null
+                  strDescriptionJP: null
+                  strDescriptionRU: null
+                  strDescriptionES: null
+                  strDescriptionPT: null
+                  strDescriptionSE: null
+                  strDescriptionNL: null
+                  strDescriptionHU: null
+                  strDescriptionNO: null
+                  strDescriptionPL: null
+                  strDescriptionIL: null
+                  strFanart1: null
+                  strFanart2: null
+                  strFanart3: null
+                  strFanart4: null
+                  strBanner: null
+                  strBadge: 'https://www.thesportsdb.com/images/media/league/badge/jzwizh1598977704.png'
+                  strLogo: 'https://www.thesportsdb.com/images/media/league/logo/ir52yc1598977493.png'
+                  strPoster: null
+                  strTrophy: null
+                  strNaming: '{strHomeTeam} vs {strAwayTeam}'
+                  strComplete: null
+                  strLocked: unlocked
+                - idLeague: '4647'
+                  idSoccerXML: null
+                  idAPIfootball: '1176'
+                  strSport: Soccer
+                  strLeague: English Isthmian League Premier Division
+                  strLeagueAlternate: BetVictor Isthmian League
+                  strDivision: '7'
+                  idCup: '0'
+                  strCurrentSeason: 2020-2021
+                  intFormedYear: '1905'
+                  dateFirstEvent: '2019-08-10'
+                  strGender: Male
+                  strCountry: England
+                  strWebsite: www.betvictoristhmian.co.uk
+                  strFacebook: ''
+                  strTwitter: ''
+                  strYoutube: ''
+                  strRSS: ''
+                  strDescriptionEN: "The Isthmian League /ˈɪs(θ)miən/ is a regional men's football league covering London, East and South East England featuring mostly semi-professional clubs. It is currently known as the BetVictor Isthmian League for sponsorship reasons.\r\n\r\nIt was founded in 1905 by amateur clubs in the London area. It now consists of 82 teams in four divisions; the Premier Division above its three feeder divisions, the North, South Central and South East divisions. Together with the Southern League and the Northern Premier League, it forms the seventh and eighth levels of the English football league system. It has various regional feeder leagues and the league as a whole is a feeder league mainly to the National League South."
+                  strDescriptionDE: null
+                  strDescriptionFR: null
+                  strDescriptionIT: null
+                  strDescriptionCN: null
+                  strDescriptionJP: null
+                  strDescriptionRU: null
+                  strDescriptionES: null
+                  strDescriptionPT: null
+                  strDescriptionSE: null
+                  strDescriptionNL: null
+                  strDescriptionHU: null
+                  strDescriptionNO: null
+                  strDescriptionPL: null
+                  strDescriptionIL: null
+                  strFanart1: null
+                  strFanart2: null
+                  strFanart3: null
+                  strFanart4: null
+                  strBanner: null
+                  strBadge: 'https://www.thesportsdb.com/images/media/league/badge/pmrp4k1579169630.png'
+                  strLogo: 'https://www.thesportsdb.com/images/media/league/logo/tdul4s1579080895.png'
+                  strPoster: null
+                  strTrophy: null
+                  strNaming: '{strHomeTeam} vs {strAwayTeam}'
+                  strComplete: null
+                  strLocked: unlocked
+                - idLeague: '4396'
+                  idSoccerXML: null
+                  idAPIfootball: '2803'
+                  strSport: Soccer
+                  strLeague: English League 1
+                  strLeagueAlternate: 'League One, Sky Bet League One'
+                  strDivision: '3'
+                  idCup: '0'
+                  strCurrentSeason: 2020-2021
+                  intFormedYear: '2004'
+                  dateFirstEvent: '2012-08-17'
+                  strGender: Male
+                  strCountry: England
+                  strWebsite: www.football-league.co.uk/sky-bet-league-1
+                  strFacebook: www.facebook.com/footballleague
+                  strTwitter: twitter.com/football_league
+                  strYoutube: ''
+                  strRSS: 'http://www.football-league.co.uk/common/rss/news-rss-feed.xml'
+                  strDescriptionEN: "Football League One (often referred to as League One for short or Sky Bet League 1) is the second-highest division of the Football League and the third tier in the English football league system.\r\n\r\nFootball League One was introduced for the 2004–05 season. It was previously known as the Football League Second Division and prior to the advent of the Premier League, the Football League Third Division.\r\n\r\nAt present (2014–15 season), Oldham Athletic hold the longest tenure in League One, last being out of the division in the 1996–97 season when they were relegated from the Championship. There are currently six former Premier League clubs competing in the League One, namely Barnsley, Bradford City, Coventry City, Oldham Athletic, Sheffield United and Swindon Town.\r\nThere are 24 clubs in Football League One. Each club plays every other club twice (once at home and once away). Three points are awarded for a win, one for a draw and zero for a loss. At the end of the season a table of the final League standings is determined, based on the following criteria in this order: points obtained, goal difference, goals scored, an aggregate of the results between two or more clubs (ranked using the previous three criteria) and, finally, a series of one or more play-off matches.\r\n\r\nAt the end of each season the top two clubs, together with the winner of the play-offs between the clubs which finished in 3rd–6th position, are promoted to Football League Championship and are replaced by the three clubs that finished at the bottom of that division.\r\n\r\nSimilarly, the four clubs that finished at the bottom of Football League One are relegated to Football League Two and are replaced by the top three clubs and the club that won the 4th–7th place play-offs in that division.\r\nSky Sports currently show live League One matches with highlights shown on BBC One on their programme called The Football League Show, which also broadcasts highlights of Football League Championship and Football League Two matches. The show is available on the red button the following Sunday until midday and is available on iPlayer all the following week. Highlights of all games in the Football League are also available to view separately on the Sky Sports website. In Sweden, TV4 Sport has the rights of broadcasting from the league. A couple of league matches during the season of 09/10 including play-off matches and the play-off final to the Championship were shown. In Australia, Setanta Sports Australia broadcasts live Championship matches. In the USA and surrounding countries including Cuba, some Football League Championship, Football League One and Football League Two games are shown on beIN Sport."
+                  strDescriptionDE: null
+                  strDescriptionFR: La Football League One est depuis août 2004 le nom de la troisième division du championnat d'Angleterre de football.
+                  strDescriptionIT: null
+                  strDescriptionCN: null
+                  strDescriptionJP: null
+                  strDescriptionRU: null
+                  strDescriptionES: null
+                  strDescriptionPT: null
+                  strDescriptionSE: null
+                  strDescriptionNL: null
+                  strDescriptionHU: null
+                  strDescriptionNO: null
+                  strDescriptionPL: null
+                  strDescriptionIL: null
+                  strFanart1: 'https://www.thesportsdb.com/images/media/league/fanart/k1noxr1539268425.jpg'
+                  strFanart2: 'https://www.thesportsdb.com/images/media/league/fanart/nb47fa1539268579.jpg'
+                  strFanart3: 'https://www.thesportsdb.com/images/media/league/fanart/gljsn21539268524.jpg'
+                  strFanart4: 'https://www.thesportsdb.com/images/media/league/fanart/okll741539268466.jpg'
+                  strBanner: null
+                  strBadge: 'https://www.thesportsdb.com/images/media/league/badge/vm1qlp1535986713.png'
+                  strLogo: 'https://www.thesportsdb.com/images/media/league/logo/qqxuqq1467458876.png'
+                  strPoster: 'https://www.thesportsdb.com/images/media/league/poster/yfca2c1538039602.jpg'
+                  strTrophy: 'https://www.thesportsdb.com/images/media/league/trophy/rsrurr1447436418.png'
+                  strNaming: '{strHomeTeam} vs {strAwayTeam}'
+                  strComplete: 'yes'
+                  strLocked: unlocked
+                - idLeague: '4397'
+                  idSoccerXML: null
+                  idAPIfootball: '2796'
+                  strSport: Soccer
+                  strLeague: English League 2
+                  strLeagueAlternate: 'League Two, Sky Bet League Two'
+                  strDivision: '4'
+                  idCup: '0'
+                  strCurrentSeason: 2020-2021
+                  intFormedYear: '2004'
+                  dateFirstEvent: '2012-08-17'
+                  strGender: Male
+                  strCountry: England
+                  strWebsite: www.efl.com/clubs-and-competitions/sky-bet-league-two
+                  strFacebook: ''
+                  strTwitter: ''
+                  strYoutube: ''
+                  strRSS: 'http://www.football365.com/league-two/rss'
+                  strDescriptionEN: "The English Football League Two (often referred to as League Two for short or Sky Bet League Two for sponsorship reasons) is the third and lowest division of the English Football League (EFL) and fourth-highest division overall in the English football league system.\r\n\r\nFootball League Two was introduced for the 2004–05 season. It was previously known as the Football League Third Division. Before the advent of the Premier League, the fourth-highest division was known as the Football League Fourth Division.\r\n\r\nAt present (2018–19 season), Morecambe hold the longest tenure in League Two, last being outside the division in the 2006–07 season when they were promoted from the league then known as the Conference National (now the National League). There are currently two former Premier League clubs competing in League Two, namely Oldham Athletic and Swindon Town."
+                  strDescriptionDE: null
+                  strDescriptionFR: La Football League Two est depuis août 2004 le nom de la quatrième division du championnat d'Angleterre de football.
+                  strDescriptionIT: null
+                  strDescriptionCN: null
+                  strDescriptionJP: null
+                  strDescriptionRU: null
+                  strDescriptionES: null
+                  strDescriptionPT: null
+                  strDescriptionSE: null
+                  strDescriptionNL: null
+                  strDescriptionHU: null
+                  strDescriptionNO: null
+                  strDescriptionPL: null
+                  strDescriptionIL: null
+                  strFanart1: 'https://www.thesportsdb.com/images/media/league/fanart/fb2gpg1545579181.jpg'
+                  strFanart2: 'https://www.thesportsdb.com/images/media/league/fanart/ej1dq01545579026.jpg'
+                  strFanart3: 'https://www.thesportsdb.com/images/media/league/fanart/vfqyyo1545579034.jpg'
+                  strFanart4: 'https://www.thesportsdb.com/images/media/league/fanart/jmvaet1545579110.jpg'
+                  strBanner: 'https://www.thesportsdb.com/images/media/league/banner/z9dbio1545579537.jpg'
+                  strBadge: 'https://www.thesportsdb.com/images/media/league/badge/v4gft11564832669.png'
+                  strLogo: 'https://www.thesportsdb.com/images/media/league/logo/wruwrv1467458767.png'
+                  strPoster: 'https://www.thesportsdb.com/images/media/league/poster/g3hbza1538055811.jpg'
+                  strTrophy: 'https://www.thesportsdb.com/images/media/league/trophy/ebhzzx1505825382.png'
+                  strNaming: '{strHomeTeam} vs {strAwayTeam}'
+                  strComplete: 'yes'
+                  strLocked: unlocked
+                - idLeague: '4329'
+                  idSoccerXML: null
+                  idAPIfootball: '2794'
+                  strSport: Soccer
+                  strLeague: English League Championship
+                  strLeagueAlternate: Championship
+                  strDivision: '2'
+                  idCup: '0'
+                  strCurrentSeason: 2020-2021
+                  intFormedYear: '2004'
+                  dateFirstEvent: '1892-09-03'
+                  strGender: Male
+                  strCountry: England
+                  strWebsite: www.football-league.co.uk/page/ChampionshipHome
+                  strFacebook: www.facebook.com/footballleague
+                  strTwitter: twitter.com/skybetchamp
+                  strYoutube: ''
+                  strRSS: www.football365.com/championship/rss
+                  strDescriptionEN: "The Football League Championship (often referred to as the Championship for short, or the Sky Bet Championship for sponsorship reasons) is the second-highest division overall in the English football league system after the Premier League. Each year, the top finishing teams in the Championship are promoted to the Premier League, and the lowest finishing teams are relegated.\r\n\r\nThe Football League Championship, which was introduced for the 2004–05 season, was previously known as the Football League First Division (1992–2004), and before that was known as Division Two (1892–1992). The winners of the Championship receive the Football League Championship trophy, the same trophy as the old First Division champions were handed prior to the Premier League's inception in 1992.\r\n\r\nThe Championship is the wealthiest non-top flight football division in the world and the seventh richest division in Europe. The average match attendance for the 2011–12 season was 17,738, which also makes it the most-watched secondary league in the world.\r\n\r\nIn the 2013–14 season, Leicester City were the division champions, Burnley were the runners up. At present (2014–15 season), Ipswich Town hold the longest tenure in the Championship, last being out of the division in the 2001–02 season when they were relegated from the Premier League."
+                  strDescriptionDE: null
+                  strDescriptionFR: Le Football League Championship est depuis août 2004 le nom de la deuxième division du championnat d'Angleterre de football.
+                  strDescriptionIT: null
+                  strDescriptionCN: null
+                  strDescriptionJP: null
+                  strDescriptionRU: null
+                  strDescriptionES: null
+                  strDescriptionPT: null
+                  strDescriptionSE: null
+                  strDescriptionNL: null
+                  strDescriptionHU: null
+                  strDescriptionNO: null
+                  strDescriptionPL: null
+                  strDescriptionIL: null
+                  strFanart1: 'https://www.thesportsdb.com/images/media/league/fanart/tupwvu1422036315.jpg'
+                  strFanart2: 'https://www.thesportsdb.com/images/media/league/fanart/vwuutv1422036421.jpg'
+                  strFanart3: 'https://www.thesportsdb.com/images/media/league/fanart/wstuyw1422036470.jpg'
+                  strFanart4: 'https://www.thesportsdb.com/images/media/league/fanart/rvutxq1422036368.jpg'
+                  strBanner: 'https://www.thesportsdb.com/images/media/league/banner/te5d5v1572285305.jpg'
+                  strBadge: 'https://www.thesportsdb.com/images/media/league/badge/m7urjx1535732496.png'
+                  strLogo: 'https://www.thesportsdb.com/images/media/league/logo/tryvqw1467458861.png'
+                  strPoster: 'https://www.thesportsdb.com/images/media/league/poster/wkn6l81506287388.jpg'
+                  strTrophy: 'https://www.thesportsdb.com/images/media/league/trophy/squsxv1422037114.png'
+                  strNaming: '{strHomeTeam} vs {strAwayTeam}'
+                  strComplete: 'yes'
+                  strLocked: unlocked
+                - idLeague: '4590'
+                  idSoccerXML: null
+                  idAPIfootball: '2942'
+                  strSport: Soccer
+                  strLeague: English National League
+                  strLeagueAlternate: National League
+                  strDivision: '5'
+                  idCup: '0'
+                  strCurrentSeason: 2020-2021
+                  intFormedYear: '1979'
+                  dateFirstEvent: '2019-08-03'
+                  strGender: Male
+                  strCountry: England
+                  strWebsite: www.thenationalleague.org.uk
+                  strFacebook: ''
+                  strTwitter: ''
+                  strYoutube: ''
+                  strRSS: ''
+                  strDescriptionEN: 'The National League, known as the Vanarama National League for sponsorship reasons, is the highest level of the National League System and fifth-highest of the overall English football league system. While all of the clubs in the top four divisions of English football are professional, the National League has a mixture of professional and semi-professional clubs. The National League is the lowest division in the English football pyramid organised on a nationwide basis. Formerly the Conference National, the league was renamed the National League from the 2015–16 season.It was announced in November 2019, that commencing the 2020 football season, 22 teams will compete in the Vanarama National League, with 4 teams to be relegated and only 1 Promotion place up for grabs!'
+                  strDescriptionDE: null
+                  strDescriptionFR: null
+                  strDescriptionIT: null
+                  strDescriptionCN: null
+                  strDescriptionJP: null
+                  strDescriptionRU: null
+                  strDescriptionES: null
+                  strDescriptionPT: null
+                  strDescriptionSE: null
+                  strDescriptionNL: null
+                  strDescriptionHU: null
+                  strDescriptionNO: null
+                  strDescriptionPL: null
+                  strDescriptionIL: null
+                  strFanart1: null
+                  strFanart2: null
+                  strFanart3: null
+                  strFanart4: null
+                  strBanner: 'https://www.thesportsdb.com/images/media/league/banner/oay05f1575114505.jpg'
+                  strBadge: 'https://www.thesportsdb.com/images/media/league/badge/sq6f2h1580074584.png'
+                  strLogo: null
+                  strPoster: 'https://www.thesportsdb.com/images/media/league/poster/ke2nhw1577970551.jpg'
+                  strTrophy: null
+                  strNaming: '{strHomeTeam} vs {strAwayTeam}'
+                  strComplete: null
+                  strLocked: unlocked
+                - idLeague: '4681'
+                  idSoccerXML: null
+                  idAPIfootball: '2943'
+                  strSport: Soccer
+                  strLeague: English National League North
+                  strLeagueAlternate: Conference North
+                  strDivision: '6'
+                  idCup: '0'
+                  strCurrentSeason: 2020-2021
+                  intFormedYear: '2004'
+                  dateFirstEvent: '2019-08-03'
+                  strGender: Male
+                  strCountry: England
+                  strWebsite: www.thenationalleague.org.uk
+                  strFacebook: ''
+                  strTwitter: ''
+                  strYoutube: ''
+                  strRSS: ''
+                  strDescriptionEN: "The National League North, formerly Conference North (named the Vanarama National League North for sponsorship reasons), is a division of the National League in England, taking its place immediately below the top division National League. Along with the National League South, it is at Step 2 of the National League System and the sixth overall tier of the English football league system. It consists of teams located in Northern England, Norfolk and the English Midlands. Since the start of the 2015–16 season, the league has been known as the National League North. As part of a sponsorship deal with Vanarama, the National League North was renamed the Vanarama National League North.\r\n\r\nThe Conference North was introduced in 2004 as part of a major restructuring of English non-League football. The champions are automatically promoted to the National League. A second promotion place goes to the winners of play-offs involving the teams finishing in second to seventh place (expanded from four to six teams in the 2017–18 season). The three bottom clubs are relegated to Step 3 leagues. Teams from this division, as well as from the National League South, enter the FA Cup at the Second Qualifying Round.\r\n\r\nFor sponsorship reasons, the division was known as the Nationwide North from its formation in 2004 until 2007, when it was renamed the Blue Square North. In 2010 it was renamed the Blue Square Bet North. When the Blue Square sponsorship ended in 2013, it was renamed the Skrill North until the 2014–15 season, when it was renamed the Vanarama North. A further name change followed in 2015, when the division was renamed the Vanarama National League North.\r\n\r\nThe National League North will expand to 24 teams in 2020, when the bottom two clubs will be relegated and four promoted from Step 3 after the 2019–20 season. Four will be relegated starting in 2021."
+                  strDescriptionDE: null
+                  strDescriptionFR: null
+                  strDescriptionIT: null
+                  strDescriptionCN: null
+                  strDescriptionJP: null
+                  strDescriptionRU: null
+                  strDescriptionES: null
+                  strDescriptionPT: null
+                  strDescriptionSE: null
+                  strDescriptionNL: null
+                  strDescriptionHU: null
+                  strDescriptionNO: null
+                  strDescriptionPL: null
+                  strDescriptionIL: null
+                  strFanart1: null
+                  strFanart2: null
+                  strFanart3: null
+                  strFanart4: null
+                  strBanner: 'https://www.thesportsdb.com/images/media/league/banner/1fptm81581358646.jpg'
+                  strBadge: 'https://www.thesportsdb.com/images/media/league/badge/bmg8lm1579102573.png'
+                  strLogo: 'https://www.thesportsdb.com/images/media/league/logo/g3x7q21579102567.png'
+                  strPoster: null
+                  strTrophy: null
+                  strNaming: '{strHomeTeam} vs {strAwayTeam}'
+                  strComplete: null
+                  strLocked: unlocked
+                - idLeague: '4682'
+                  idSoccerXML: null
+                  idAPIfootball: '2944'
+                  strSport: Soccer
+                  strLeague: English National League South
+                  strLeagueAlternate: Conference South
+                  strDivision: '6'
+                  idCup: '0'
+                  strCurrentSeason: 2020-2021
+                  intFormedYear: '2004'
+                  dateFirstEvent: '2019-08-03'
+                  strGender: Male
+                  strCountry: England
+                  strWebsite: www.thenationalleague.org.uk
+                  strFacebook: ''
+                  strTwitter: ''
+                  strYoutube: ''
+                  strRSS: ''
+                  strDescriptionEN: "The National League South, formerly Conference South (billed as The Motorama National League South for sponsorship reasons), is one of the second divisions of the National League in England, immediately below the top division National League. Along with National League North, it is at the second level of the National League System, and at the sixth tier overall of the English football league system.\r\n\r\nIt was introduced in 2004 as part of a major restructuring of the National League System. The champion team each year is automatically promoted to the National League. A second promotion place goes to the winners of play-offs involving the teams finishing in second to seventh place (expanded from four to six teams in the 2017–18 season). The three bottom clubs are relegated to Step 3 leagues.\r\n\r\nFor sponsorship reasons, it has been known as Blue Square South (2007–2010), Blue Square Bet South (2010–2013), Skrill South (2013–2014), the Vanarama Conference South (2014–2015), the Vanarama National League South (2015–2019) and the Motorama National League South following a three-year sponsorship deal announced in January 2019. Since the start of the 2015–16 season, the league is known as the National League South. The 2018–19 champions are Torquay United.\r\n\r\nThe National League South will expand to 24 teams in 2020, when the bottom two clubs will be relegated and four promoted from Step 3. Four will be relegated starting in 2021."
+                  strDescriptionDE: null
+                  strDescriptionFR: null
+                  strDescriptionIT: null
+                  strDescriptionCN: null
+                  strDescriptionJP: null
+                  strDescriptionRU: null
+                  strDescriptionES: null
+                  strDescriptionPT: null
+                  strDescriptionSE: null
+                  strDescriptionNL: null
+                  strDescriptionHU: null
+                  strDescriptionNO: null
+                  strDescriptionPL: null
+                  strDescriptionIL: null
+                  strFanart1: null
+                  strFanart2: null
+                  strFanart3: null
+                  strFanart4: null
+                  strBanner: null
+                  strBadge: 'https://www.thesportsdb.com/images/media/league/badge/seqn4e1579102486.png'
+                  strLogo: 'https://www.thesportsdb.com/images/media/league/logo/ahayfb1579102533.png'
+                  strPoster: null
+                  strTrophy: null
+                  strNaming: '{strHomeTeam} vs {strAwayTeam}'
+                  strComplete: null
+                  strLocked: unlocked
+                - idLeague: '4646'
+                  idSoccerXML: null
+                  idAPIfootball: '1177'
+                  strSport: Soccer
+                  strLeague: English Northern Premier League Premier Division
+                  strLeagueAlternate: Northern Premier League
+                  strDivision: '7'
+                  idCup: '0'
+                  strCurrentSeason: 2020-2021
+                  intFormedYear: '1968'
+                  dateFirstEvent: '2019-08-17'
+                  strGender: Male
+                  strCountry: England
+                  strWebsite: ''
+                  strFacebook: ''
+                  strTwitter: ''
+                  strYoutube: ''
+                  strRSS: ''
+                  strDescriptionEN: "The Northern Premier League is an English football league that was founded in 1968. It has three divisions – the Premier Division (which stands at level 7 of the English football league system) – and Division One North West and Division One South East (which both stand at level 8).\r\n\r\nGeographically, the league covers all of Northern England and the northern/central areas of the Midlands. Originally a single-division competition, a second division was added in 1987: Division One, and in 2007 a third was added when Division One split into two geographic sections - Division One North and Division One South. In 2018 Division One was re-aligned as East and West Divisions, then North West and South East in 2019.\r\n\r\nSuccessful teams at the top of the NPL Premier Division are promoted to level 6 of the pyramid (either National League North or National League South), and at the bottom end of the competition, teams are relegated down to level 9, where several regional feeder leagues promote clubs into the league."
+                  strDescriptionDE: null
+                  strDescriptionFR: null
+                  strDescriptionIT: null
+                  strDescriptionCN: null
+                  strDescriptionJP: null
+                  strDescriptionRU: null
+                  strDescriptionES: null
+                  strDescriptionPT: null
+                  strDescriptionSE: null
+                  strDescriptionNL: null
+                  strDescriptionHU: null
+                  strDescriptionNO: null
+                  strDescriptionPL: null
+                  strDescriptionIL: null
+                  strFanart1: null
+                  strFanart2: null
+                  strFanart3: null
+                  strFanart4: null
+                  strBanner: null
+                  strBadge: 'https://www.thesportsdb.com/images/media/league/badge/wfib871579176671.png'
+                  strLogo: null
+                  strPoster: null
+                  strTrophy: null
+                  strNaming: '{strHomeTeam} vs {strAwayTeam}'
+                  strComplete: null
+                  strLocked: unlocked
+                - idLeague: '4328'
+                  idSoccerXML: null
+                  idAPIfootball: '2790'
+                  strSport: Soccer
+                  strLeague: English Premier League
+                  strLeagueAlternate: Premier League
+                  strDivision: '0'
+                  idCup: '0'
+                  strCurrentSeason: 2020-2021
+                  intFormedYear: '1992'
+                  dateFirstEvent: '2000-08-18'
+                  strGender: Male
+                  strCountry: England
+                  strWebsite: www.premierleague.com
+                  strFacebook: en-gb.facebook.com/premierleague/
+                  strTwitter: twitter.com/premierleague
+                  strYoutube: www.youtube.com/channel/UCG5qGWdu8nIRZqJ_GgDwQ-w
+                  strRSS: 'http://feeds.feedburner.com/PremierLeagueFootballNews'
+                  strDescriptionEN: "The Premier League, often referred to as the English Premier League or the EPL outside England, is the top level of the English football league system. Contested by 20 clubs, it operates on a system of promotion and relegation with the English Football League (EFL). Seasons run from August to May with each team playing 38 matches (playing all 19 other teams both home and away). Most games are played on Saturday and Sunday afternoons.\r\n\r\nThe competition was founded as the FA Premier League on 20 February 1992 following the decision of clubs in the Football League First Division to break away from the Football League, founded in 1888, and take advantage of a lucrative television rights deal. The deal was worth around £1 billion a year domestically as of 2013–14, with Sky and BT Group securing the domestic rights to broadcast 116 and 38 games respectively. The league is a corporation in which the member clubs act as shareholders, and generates €2.2 billion per year in domestic and international television rights. Clubs were apportioned central payment revenues of £2.4 billion in 2016–17, with a further £343 million in solidarity payments to English Football League (EFL) clubs.\r\n\r\nThe Premier League is the most-watched sports league in the world, broadcast in 212 territories to 643 million homes and a potential TV audience of 4.7 billion people. For the 2018–19 season average Premier League match attendance was at 38,181, second to the Bundesliga's 43,500, while aggregated attendance across all matches is the highest of any league at 14,508,981. Most stadium occupancies are near capacity. The Premier League ranks second in the UEFA coefficients of leagues based on performances in European competitions over the past five seasons as of 2019, only behind Spain's La Liga.\r\n\r\nForty-nine clubs have competed since the inception of the Premier League in 1992: forty-seven English and two Welsh clubs. Seven of them have won the title: Manchester United (13), Chelsea (5), Manchester City (4), Arsenal (3), Blackburn Rovers (1), Leicester City (1) and most recently Liverpool (1). The record of most points in a Premier League season is 100, set by Manchester City in 2017–18."
+                  strDescriptionDE: "Die Premier League (offiziell nach dem Sponsoren „Barclays Premier League“, umgangssprachlich „The Premiership“) ist die höchste Spielklasse im englischen Fußball und befindet sich damit auf der obersten Ebene des englischen Ligasystems. Es nehmen momentan 20 Vereine an einer Spielrunde, die zwischen August und Mai des Folgejahres ausgetragen wird, teil. Über eine Auf- und Abstiegsregelung mit dem darunter angesiedelten Football-League-Verband findet jährlich ein Austausch von drei Klubs statt.\r\n\r\nDie am 20. Februar 1992 als „FA Premier League“ gegründete Spielklasse nahm am 15. August desselben Jahres offiziell ihren Spielbetrieb auf. Die Vereine der damaligen Eliteliga First Division profitierten damit erheblich von deutlich erhöhten Fernseheinnahmen und spalteten sich von der Football League ab, die selbst damit die seit 1888 bestehende Vorherrschaft als Plattform für den englischen und walisischen Spitzenfußball verlor. Die Premier League hat sich seitdem zu der Sportliga mit der weltweit höchsten Zuschaueranzahl entwickelt.[1]\r\n\r\nVon den mittlerweile 45 teilnehmenden Vereinen konnten bisher nur fünf Mannschaften die Premier-League-Meisterschaft gewinnen: Manchester United (13 Titel), FC Arsenal (drei Titel), FC Chelsea (drei Titel), Manchester City (zwei Titel) und die Blackburn Rovers (ein Titel). Neben 43 englischen Clubs kommen zwei Premier-Ligisten aus Wales.\r\n\r\nDas Gegenstück im Frauenbereich ist die FA Women’s Premier League (oder genauer die „FA Women's Premier League National Division“), wobei die Vereine dort in mehr oder weniger abhängigen Verbindungen zu den renommierten Klubs im Männerfußball aus der Premier League und der Football League stehen. Dennoch besitzt die Frauenliga einen eher semiprofessionellen Charakter und findet in der Öffentlichkeit im Vergleich zum Männerbereich eine deutlich geringere Resonanz.\r\n\r\nSeit 1999 existiert zudem für die Reserveteams der Profivereine die Premier Reserve League, in der seit der Spielzeit 2006/07 nur Mannschaften der Premier-League-Teilnehmer spielberechtigt sind. Dort kommen neben den Ersatzspielern, die nicht Teil des offiziellen Profikaders sind, vorrangig die jungen Talente der Erstligavereine zum Einsatz."
+                  strDescriptionFR: "Le Championnat d'Angleterre de football est une compétition sportive située au sommet de la hiérarchie du football en Angleterre. Lancée en 1888 par la The Football Association sous le nom de Football League, la compétition laisse place en 1992 à la Premier League, dont le nom officiel est Barclays Premier League depuis 2004.\r\n\r\nLa compétition se déroule annuellement, du mois d'août au mois de mai suivant, sous forme d'un championnat mettant aux prises vingt clubs professionnels, actionnaires de la Premier League, qui disputent chacun 38 matchs. À la fin de la saison, le premier est sacré champion, les suivants sont qualifiés pour les compétitions européennes organisées par l'UEFA tandis que les trois équipes totalisant le plus faible nombre de points sont reléguées en Football League, devenu l'échelon inférieur.\r\n\r\nCe championnat est l'un des plus prestigieux au monde et le plus populaire en termes de téléspectateurs, estimés à plus d'un milliard en 2007. Il est réputé pour être l'un des plus exigeants physiquement pour les joueurs, en raison du calendrier dense, malgré le passage du championnat de 22 à 20 clubs en 1995, et de l'engagement traditionnel du football britannique. La Premier League se place par ailleurs au premier rang européen des championnats au coefficient UEFA de 2008 à 2012, après l'avoir déjà été de 1968 à 1975 et en 1985.\r\n\r\nDepuis 1888, 23 clubs ont remporté le championnat : les plus titrés sont Manchester United (20 titres, sept de Football League et treize de Premier League), Liverpool (18, tous de Football League) et Arsenal (13, dix de Football League et trois de Premier League). Trois autres clubs ont remporté la Premier League depuis 1992 : Chelsea (trois fois), Blackburn Rovers et Manchester City."
+                  strDescriptionIT: "La Premier League è la massima serie del campionato inglese di calcio ed è gestita dalla Football Association (FA).\r\n\r\nSi tratta di un campionato formato da 20 squadre (22 squadre fino al 1995) che non fanno parte della Football League, nato dallo scisma del calcio inglese del 1992.\r\n\r\nAl 2016 la Premier League occupa il secondo posto nel ranking UEFA per competizioni di club.\r\n\r\nAlla massima divisione del campionato inglese partecipano 20 squadre, che si affrontano in un torneo all'Italiana con partite di andata e ritorno. Il regolamento assegna, per ogni incontro, tre punti alla squadra vincitrice, zero punti alla squadra sconfitta ed un punto ad entrambe le formazioni in caso di pareggio.\r\n\r\nAlla squadra prima in classifica dopo le 38 gare di campionato viene assegnato il titolo di campione d'Inghilterra. Unitamente alla seconda ed alla terza classificata, essa accede al tabellone principale della UEFA Champions League, mentre la quarta deve prima passare per il turno di play-off. La quinta in classifica si qualifica alla UEFA Europa League insieme alla squadra vincitrice della FA Cup (fase a gironi) e alla vincitrice della League Cup (terzo turno di qualificazione). Le ultime tre squadre classificate vengono retrocesse in Football League Championship (seconda divisione inglese)."
+                  strDescriptionCN: "英格兰足球超级联赛（英语：Premier League），简称英超，過往冠名為巴克萊超級聯賽（Barclays Premier League），是英格蘭足球總會轄下的职业足球联赛，是英格蘭聯賽系統的最高等级联赛，英超由超级联盟负责具体运作，而運作模式為一所以20間球會共同擁有的有限公司。\r\n英格兰超级联赛成立於1992年2月20日，其前身是英格兰甲级联赛(頂級聯賽)。現今英超联赛已經成為世界上最受歡迎以及最受關注的足球聯賽，亦是英格蘭國家隊的少林寺。\r\n英超联赛自1991至1993年成立以來有47支球隊參與競爭，但只有六支奪得冠軍：曼聯（13次），車路士（4次），阿仙奴（3次），曼城（2次），布力般流浪和李斯特城（1次）。\r\n\r\n英格兰超级联赛是收入最高的足球联赛，根據德勤足球俱樂部財富排名榜, 2014–15年 收入最高首 30 名球隊, 英格蘭（英超）已佔了16隊。[1]。而2016–17年 未來3季英國以外地區轉播收入，每季超逾30億英鎊 。淨是未來3季(2016 -2019) 來自 香港 地區轉播收入, 每季已經約1億多美元。而在英國國內還有 BT Sport、 Sky Sports 51.6億鎊直播收入。[2]\r\n\r\n巴克莱银行曾以與超级联赛簽署價值6,580萬英鎊贊助合約3年至2010年 [3]。 2012年7月12日英超賽會宣佈2013/14賽季至2015/16年賽季繼續由巴克莱银行冠名贊助英超，贊助合約以每賽季4000萬英鎊計算即總值1億2000萬英鎊[4]。2016–17年 開始不再實行冠名巴克萊贊助，只作 Premier League 超級聯賽，，而亦進行了品牌改造，品牌標誌、品牌字體將有新面貌[5]。"
+                  strDescriptionJP: "プレミアリーグ（英: Premier League）は、イングランドのサッカーリーグにおけるトップディヴィジョン（1部リーグ）。[1]\r\n\r\n世界中で約10億人以上に視聴され、全世界で最も人気が高いリーグであり[2]、世界最高峰レベルのリーグの一つである。サッカー競技のみならず、全世界のスポーツリーグの中で最もテレビ中継の視聴者が多く、人気、実力は共に高い。また、上位チームから下位チームまでの資金力及び、レベル差が小さいのも特徴で度々下位チームが上位チームに勝利することがある。このため現在では世界で最も優勝するのが難しいリーグであると言われている。2000年以降、欧州主要リーグの中でも圧倒的な売上高を誇り、2009-2010シーズンの売上高は24億7900万ユーロであり、2位のブンデスリーガを大きく引き離している[3]。\r\nテレビ放映権料も巨額であり2016年から2019年の3年間で95億ユーロ（約1.3兆円）の契約を結んでいる。放映権料の半分は各クラブに均等に分配され、25％は放映試合数、残り25％は順位に応じて分配される。[4]また海外放送分については均等に分配される。2014-2015年には1位チェルシーには1億2400万ユーロ（約153億円）、最下位のQPRでさえも7900万ユーロ（約105億円）の収益を手にした。[5]\r\nプレミアリーグ創設から、優勝経験があるのは、アーセナル、ブラックバーン・ローヴァーズ、チェルシー、マンチェスター・ユナイテッド、マンチェスター・シティ、レスター・シティの6クラブのみ。2000年代には、マンチェスター・U、チェルシー、アーセナル、リヴァプールの4クラブが毎年優勝争いを繰り広げていることから「ビッグ4」と呼ばれてきているが、2010年からは、それらのチームにトッテナム・ホットスパーとマンチェスター・シティを加えた「ビッグ6」になりつつある。2011年5月、1992年のプレミアリーグ創設から数えて12度目の優勝をマンチェスター・Uが果たした。この結果フットボールリーグ時代の7度の優勝と合わせて19回目の優勝となり、イングランドのトップリーグでの最多優勝チームとなった。優勝チームは翌シーズン、袖に刺繍されている獅子のロゴが金色になる（通常は紺色）。\r\n\r\nプレミアリーグは1992年にイングランドのプロサッカーリーグの改編に伴い、フットボールリーグから分離して新設された。20クラブが所属し、ホーム・アンド・アウェー方式による2回総当りで8月から翌年5月にかけて全38試合を戦う。勝ち点はそれぞれ勝利が3、引き分けが1、負けが0となっており、獲得した勝ち点によって順位を決定する。勝ち点が等しい場合は得失点差、それも等しい場合は総得点による。優勝クラブ、2位および3位クラブには、翌年度のUEFAチャンピオンズリーグの本大会への出場資格が、4位クラブにはプレーオフへの出場資格が与えられる。5位クラブには翌年度のUEFAヨーロッパリーグの本大会への出場資格が与えられる。また、下位3クラブが自動的に2部相当のフットボールリーグ・チャンピオンシップに降格し、フットボールリーグ・チャンピオンシップからは上位2クラブと、3〜6位の4クラブを対象としたプレーオフを勝ち抜いた1クラブの、計3クラブが昇格する。\r\n外国籍選手の登録制限は無く、EUおよびEFTA加盟国の国籍を持つ選手は労働許可証取得の必要が無い。それ以外の国籍選手は労働許可証取得の必要があるが、取得の条件として過去2年間で代表Aマッチ（親善試合を除く公式戦）の75％以上に出場していること、過去2年間のFIFAランキングの平均順位が70位以上の国の代表選手であることが必要。ただし、条件を満たさない場合でも特例として労働許可証が発行されることはある。ちなみに、イギリス（イングランド・ウェールズ・スコットランド・北アイルランド）、およびアイルランド国籍の選手は国内選手扱いとなる。ベンチ入り人数は7人まで。"
+                  strDescriptionRU: "Премье́р-лига (англ. Premier League) — профессиональная футбольная лига для английских футбольных клубов (также в ней могут играть некоторые клубы из Уэльса[2]). Является высшим дивизионом в системе футбольных лиг Англии. В ней выступают 20 клубов. Чемпионат проходит с августа по май, каждая команда проводит 38 матчей. До 2016 года турнир официально назывался Премьер-лига Barclays (англ. Barclays Premier League), с 2016 года турнир не имеет главного спонсора. За пределами Англии турнир часто называют «английской Премьер-лигой» (English Premier League).\r\n\r\nТурнир был основан 20 февраля 1992 года под названием «Премьер-лига Футбольной ассоциации» (англ. FA Premier League) после того, как клубы Первого дивизиона приняли решение о выходе из Футбольной лиги, основанной в 1888 году, с целью получения большей финансовой выгоды, в первую очередь за счёт получения большей прибыли от продажи прав на телевизионные трансляции. С тех пор Премьер-лига стала самым популярным спортивным чемпионатом в мире[3]. Также она является самой прибыльной футбольной лигой в мире: консолидированные клубные доходы в сезоне 2007/08 составили 1,93 млрд фунтов (3,15 млрд долларов)[4]. На данный момент, если судить по таблице коэффициентов УЕФА, Премьер-лига является третьим по силе национальным чемпионатом в Европе, уступая лишь испанской «Ла Лиге» и немецкой «Бундеслиге»[5].\r\n\r\nВ Премьер-лиге выступало 45 различных клубов, но лишь 6 из них выигрывали чемпионский титул: «Манчестер Юнайтед» (13 раз), «Челси» (4 раза), «Арсенал» (3 раза), «Манчестер Сити» (2 раза), «Блэкберн Роверс» и «Лестер Сити» (по 1 разу). Действующим чемпионом является « Лестер Сити», выигравший первый в своей истории чемпионский титул в сезоне 2015/16.\r\n\r\n"
+                  strDescriptionES: "La Premier League, también conocida en el Reino Unido como The Premiership, es la máxima categoría del sistema de Ligas de fútbol de Inglaterra. Comenzó a disputarse en la temporada 1992-93 y desde entonces se ha celebrado sin interrupciones. En ella pueden también participar clubes del País de Gales que se encuentren adscritos al citado sistema de ligas, como si de otros clubes ingleses se tratara. Este es el caso del Swansea City Association Football Club, club radicado en Gales participante de la liga y que ha llegado a representar a Inglaterra en competiciones europeas.\r\n\r\nEstablecida la Primera División de Inglaterra denominada como The Football League en 1888 bajo amparo de The Football Association, se fusionó en 1892 con la Football Alliance para conformar el primer sistema de divisiones, y pasándose a denominar la principal categoría como Football League First Division. Dicho sistema fue ampliándose hasta que se produjo una escisión en la competición pasando a ser la Football League —que actualmente conforma tres divisiones— Premier League su principal exponente, mientras que la hasta el momento Primera División conjunta de Inglaterra y Gales de la Football League pasó a ser la Segunda.\r\n\r\nEl actual formato fue establecido tras un acuerdo el 20 de febrero de 1992 entre los clubes de la First Division por el que decidían separarse de la Football League para tomar ventaja de un lucrativo contrato de derechos de televisión impulsado por ellos mismos. Es por tanto una competición de carácter privado o sociedad en la que los veinte clubes miembros actúan como accionistas a través de una persona delegada por cada representante, quienes rigen dicho comité junto con Dave Richards, director del mismo, y Richard Scudamore, su director ejecutivo.\r\n\r\nEl torneo fue considerado por la Federación Internacional de Historia y Estadística de Fútbol de la FIFA como la liga más fuerte de la primera década del siglo xxi en Europa, superando a la Primera División de España y la Serie A de Italia que ocupaban el segundo y tercer lugar respectivamente.2\r\n\r\nDesde su segunda edición y hasta la temporada 2015-16 el nombre del patrocinador principal se reflejaba en su denominación oficial, siendo el último desde 2004 cuando se conocía como Barclays Premier League, circunstancia que dejó de ser así a partir de la temporada 2016-17, cuando desapareció cualquier alusión a los patrocinadores con el propósito de mantener una imagen comercial limpia. Desde entonces se conoce simplemente como Premier League.\r\n\r\nA lo largo de su historia seis clubes han resultado campeones, siendo el Manchester United Football Club el equipo más laureado con trece campeonatos. Chelsea Football Club, Arsenal Football Club, Manchester City Football Club, Blackburn Rovers Football Club y Leicester City Football Club completan el resto de títulos de las veinticinco temporadas del campeonato.\r\n\r\nEl mayor número de puntos en una edición, con noventa y cinco, fue logrado en las temporada 2004-05 por el Chelsea F. C., logrando también el récord de goles en una edición con 103 en la temporada 2009-10."
+                  strDescriptionPT: "Premier League é uma liga profissional de futebol da Inglaterra e está no topo do sistema de ligas do futebol inglês, sendo a principal competição de futebol do país. Ela era patrocinada pelo Barclays Bank até 2016, motivo pelo qual era oficialmente chamada de Barclays Premier League.\r\n\r\nÉ disputada por vinte clubes no sistema de pontos corridos, em que no final de cada temporada os quatro melhores colocados participam da Liga dos Campeões da UEFA, e os três piores são rebaixados para a Football League Championship, dando lugar aos três melhores desta competição. Cada temporada decorre entre agosto e maio, tendo 38 rodadas com dez partidas cada, totalizando 380 partidas em toda a temporada. A maioria dos jogos são disputados durante o período da tarde nos sábados e domingos e algumas vezes durante a noite no meio da semana.\r\n\r\nA competição foi formada como FA Premier League em 20 de fevereiro de 1992, após a decisão dos clubes da Football League First Division de romperem com a Football League, originalmente fundada em 1888, para aumentarem suas receitas provenientes de direitos de televisão, que atualmente rendem um bilhão de libras por ano para transmissões domésticas, com a BSkyB e BT Group. A Premier League é a liga de futebol mais popular do mundo, transmitida por oitenta redes de televisão em mais de duzentos países.\r\n\r\nNa temporada 2013–14 a média de público da competição foi de 36 631, sendo a segunda mais alta em ligas de futebol profissional, atrás apenas da Bundesliga. A Premier League está em segundo lugar nos coeficientes de ligas da UEFA, baseados nos desempenhos em competições europeias ao longo dos últimos cinco anos.\r\n\r\nDesde 1888, 24 clubes foram coroados campeões do sistema de futebol inglês. Desde a criação da liga, em 1992, um total de 47 clubes já estiveram na Premier League, dos quais seis venceram o título: o Manchester United, o maior campeão com treze títulos, o Chelsea, com quatro títulos, o Arsenal, com três títulos e único clube a conquistar a Premier League de forma invicta, o Manchester City, com dois títulos, Blackburn Rovers e o atual campeão Leicester City , com uma conquista. Além dos títulos únicos das cidades de Blackburn e Leicester, apenas as cidades de Manchester (15) e Londres (7) festejaram o título."
+                  strDescriptionSE: "Premier League, 1992–2007 benämnd FA Premier League, är en engelsk fotbollsliga, grundad 1992, som är den högsta divisionen i det engelska ligasystemet.\r\n\r\n20 klubbar har plats i ligan som spelas höst–vår och varar från augusti till maj. De fyra högst placerade klubbarna är direktkvalificerade till Uefa Champions League och de tre lägst placerade blir nedflyttade till English Football Leagues förstadivision, EFL Championship. Vinnaren av Premier League kan kalla sig \"Engelska mästare i fotboll\" även om serien också kan innehålla klubbar från Wales; till exempel Swansea City och Cardiff City.\r\n\r\nPremier League är världens mest bevakade fotbollsliga[2][3] och på Uefas ranking över ligor (som bygger på resultat i europeiska cuper under de senaste fem åren)[4] räknas man som den näst bästa inhemska ligan efter spanska La Liga.[5]\r\n\r\nTotalt 49 klubbar har till och med säsongen 2018/19 tävlat i Premier League men bara sex av dem har vunnit titeln: Manchester United, Blackburn Rovers, Arsenal, Chelsea, Manchester City och Leicester City. Sex klubbar, Arsenal, Chelsea, Everton, Liverpool, Manchester United och Tottenham Hotspur, har spelat oavbrutet i ligan sedan dess grundande 1992."
+                  strDescriptionNL: "De Premier League is de hoogste Engelse voetbalcompetitie.\r\n\r\nDe competitie bestaat uit twintig clubs die tussen augustus en mei in totaal 380 wedstrijden spelen. Naast Engelse clubs kunnen ook clubs uit Wales zich kwalificeren voor een plaats in de Premier League, maar daarvoor moeten zij wel deelnemen aan de Engelse voetbalpiramide. Er bestaat een promotie- en degradatieregeling tussen de Premier League en de Football League.\r\n\r\nBuiten Engeland wordt vaak naar de competitie gerefereerd als de Engelse Premier League (EPL)."
+                  strDescriptionHU: "A Premier League (más néven Premiership vagy Barclays Premier League) az angol labdarúgó bajnokságok legfelsőbb osztályának elnevezése. Ez a világ legnézettebb labdarúgó-bajnoksága,[1] és ez hozza az összes bajnokság közül a legtöbb hasznot.[2]\r\n\r\nA jelenlegi rendszert 1992. február 20-án hozták létre az addigi legfelső osztályú The Football League-ből, amit 1888-ban alapítottak. Jelenleg húsz csapat a tagja. A szezonok augusztustól májusig tartanak, és 38 mérkőzést játszanak a részt vevő csapatok: minden csapat kétszer az összes többivel, egyszer hazai, egyszer idegen pályán. Minden szezon végén három csapat esik ki a másodosztályba (The Championship), és három kerül fel onnan a Premiershipbe. Az eddigi 24 szezon alatt 45 klub szerepelt a Premier League-ben, de csak hat csapat nyerte meg a sorozatot: a Manchester United (tizenháromszor), az Arsenal (háromszor), a Chelsea (négyszer), a Manchester City (kétszer), a Blackburn Rovers (egyszer), valamint a Leicester City (egyszer).\r\n\r\nA világ hatodik legnagyobb nézőszámú profi sportligája.[3]"
+                  strDescriptionNO: "Premier League er den engelske toppserien i fotball. Premier League er på toppen av ligasystemet i engelsk fotball, og består av 20 lag, som operer med systemet opprykk og nedrykk med Football League. Premier League er et aksjeselskap hvor de 20 lagene i ligaen er aksjonærer. Sesongen starter i august og avsluttes i mai, og alle lagene spiller 19 kamper hjemme og borte, til sammen 38 kamper per sesong. Premier League var inntil 2015/16-sesongen kjent som Barclays Premier League.[1]\r\n\r\nLigaen ble dannet som FA Premier League 20. februar 1992, som følge av avgjørelsen om at klubbene i Football League First Division skulle skilles fra Football League, og ta fordel av de lukrative TV-avtalene. Premier League har siden blitt verdens mest sette sportsliga.[2] Det er verdens mest lukrative fotballiga, med totale klubbinntekter på til sammen 1 930 000 000 britiske pund (ca. 19,3 milliarder norske kroner) i 2007/08.[3]\r\n\r\nTotalt har det spilt 44 lag i Premier League, siste er Blackpool, men bare seks lag har vunnet ligaen: Manchester United, Blackburn Rovers, Arsenal, Chelsea, Manchester City og Leicester City."
+                  strDescriptionPL: "Premier League (nazywana także English Premier League) – zawodowa liga piłkarska znajdująca się na najwyższym szczeblu rozgrywek piłkarskich w Anglii. Gra w niej 20 klubów. W lidze tej obowiązuje reguła awansu i spadku. Premier League jest korporacją, której 20 zespołów w niej grających są akcjonariuszami. Sezon rozgrywek rozpoczyna się w sierpniu, a kończy się w maju. Każdy klub rozgrywa 38 meczów w tym czasie ze wszystkich 380 spotkań ligowych.\r\n\r\nLiga została założona jako FA Premier League 20 lutego 1992 roku po tym jak zespoły Football League First Division zdecydowały stać się niezależne od The Football League powstałej w 1888 roku. Czerpała ona zyski z praw telewizyjnych. Od tego czasu Premier League jest najchętniej oglądaną ligą sportową na świecie[1]. Są to także najbardziej dochodowe rozgrywki piłkarskie. W sezonie 2007/2008 obroty klubów wyniosły 1,93 miliardów funtów (3,15 miliardów dolarów)[2]. Premier League zajmuje trzecie miejsce w rankingu UEFA, w którym liczą się występy zespołów z danych lig w europejskich pucharach z ostatnich pięciu lat[3].\r\n\r\nOd czasu założenia w rozgrywkach Premier League brały udział 44 kluby.\r\n\r\nMimo znaczących sukcesów europejskiej piłki nożnej w latach 70. i na początku 80., późne lata 80. to spadek znaczenia piłki angielskiej. Kibice zmagali się z niedostatecznymi udogodnieniami na stadionach, które popadały w rozsypkę, chuligaństwo rozpowszechniało się. Poza tym zespoły z Anglii dostały zakaz gry w pucharach europejskich po zamieszkach na Heysel w 1985 roku[4]. The Football League First Division, będąca w tym czasie na pierwszym szczeblu rozgrywek w Anglii była za innymi ligami, między innymi włoską Serie A i hiszpańską Primera División zarówno we frekwencji na spotkaniach jak i obrotach zespołów. Z tego powodu niektórzy angielscy zawodnicy przenosili się za granicę[5]. Na początku lat 90. sytuacja ta uległa zmianie; Anglia na Mistrzostwach Świata 1990 doszła do półfinałów. UEFA w tym samym roku zniosła zakaz gry angielskim zespołom w europejskich pucharach. Rok później Manchester United zdobył Puchar Zdobywców Pucharów. Po tragedii na Hillsborough wydano także Raport Taylora, który miał poprawić bezpieczeństwo na stadionach poprzez usunięcie z nich miejsc stojących[6].\r\n\r\nPieniądze telewizyjne stały się ważniejsze; Football League otrzymało 6,3 milionów funtów za dwuletnią umowę podpisaną w 1986 roku, zaś gdy w 1988 roku zawarto nowy, czteroletni kontrakt, kwota ta wynosiła 44 miliony[7]. W 1988 roku pierwszy raz spróbowano oddzielić First Division od Football League, jednak nie powiodło się to[8]. Stadiony rozbudowywano, coraz więcej osób przychodziło na spotkania; najlepsze kluby z Anglii ponownie rozpoczęły starania o powstanie nowych rozgrywek, niezależnych od Football League."
+                  strDescriptionIL: 'ע"א פרמייר ליג (The FA Premier League) נגד המועצה להסדר ההימורים בספורט[1] הוא פסק דין של בית המשפט העליון שניתן בשנת 2010. עיקר המחלוקת נסובה סביב רצונן של ליגות הכדורגל בבריטניה לנכס לעצמן את זכות היוצרים בלוחות משחקים שהוכנו עבור הטורנירים שמתבצעים בליגות האנגליות והסקוטיות. כלומר, לנכס לעצמן את היכולות להשתמש ולאפשר שימוש באותם הלוחות שבהכנתם הושקעו משאבים רבים. בבואו להכריע את הדין, ביקש בית המשפט לאזן בין האינטרסים העומדים בבסיס דיני זכויות היוצרים, בעיקר בין האינטרס לתמרץ יוצרים כדי לעודד יצירה ובכך להעשיר את עולם הביטוי ובין הזכות לחופש המידע. פסק הדין מהווה חיזוק להלכות בית המשפט בעניין דרישת המקוריות שבחוק זכות יוצרים וכן למבחנים המשפטיים שנועדו לקבוע קנה מידה בנוגע לטיב המקוריות הנדרשת. השופט סלים ג''ובראן, בהסכמתם של השופטים ניל הנדל ומרים נאור, קבע שלוחות המשחקים אינם מהווים יצירה מקורית ולפיכך לא חוסים תחת הגנת זכות היוצרים.'
+                  strFanart1: 'https://www.thesportsdb.com/images/media/league/fanart/o9c14r1547554186.jpg'
+                  strFanart2: 'https://www.thesportsdb.com/images/media/league/fanart/917urb1547554025.jpg'
+                  strFanart3: 'https://www.thesportsdb.com/images/media/league/fanart/3tjmas1547554302.jpg'
+                  strFanart4: 'https://www.thesportsdb.com/images/media/league/fanart/wmi78w1593611364.jpg'
+                  strBanner: 'https://www.thesportsdb.com/images/media/league/banner/4m3g4s1520767740.jpg'
+                  strBadge: 'https://www.thesportsdb.com/images/media/league/badge/pdd43f1610891709.png'
+                  strLogo: 'https://www.thesportsdb.com/images/media/league/logo/4c377s1535214890.png'
+                  strPoster: 'https://www.thesportsdb.com/images/media/league/poster/v8d7nf1535455996.jpg'
+                  strTrophy: 'https://www.thesportsdb.com/images/media/league/trophy/yrywtr1422246014.png'
+                  strNaming: '{strHomeTeam} vs {strAwayTeam}'
+                  strComplete: 'yes'
+                  strLocked: unlocked
+      description: Search leagues from All leagues data
+      parameters:
+        - in: formData
+          type: string
+          name: c
+          description: 'Country. Example : c=England'
+        - in: formData
+          type: string
+          name: s
+          description: 'Sport. Example : s=Soccer'
+    parameters: []
+  /searchevents.php:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          schema:
+            description: ''
+            type: object
+            properties:
+              event:
+                type: array
+                uniqueItems: true
+                minItems: 1
+                items:
+                  required:
+                    - idEvent
+                    - strEvent
+                    - strEventAlternate
+                    - strFilename
+                    - strSport
+                    - idLeague
+                    - strLeague
+                    - strSeason
+                    - strDescriptionEN
+                    - strHomeTeam
+                    - strAwayTeam
+                    - intHomeScore
+                    - intRound
+                    - intAwayScore
+                    - intSpectators
+                    - dateEvent
+                    - dateEventLocal
+                    - strTime
+                    - strTimeLocal
+                    - idHomeTeam
+                    - idAwayTeam
+                    - strResult
+                    - strTweet1
+                    - strTweet2
+                    - strTweet3
+                    - strVideo
+                    - strPostponed
+                    - strLocked
+                  properties:
+                    idEvent:
+                      type: string
+                      minLength: 1
+                    idSoccerXML: {}
+                    idAPIfootball: {}
+                    strEvent:
+                      type: string
+                      minLength: 1
+                    strEventAlternate:
+                      type: string
+                      minLength: 1
+                    strFilename:
+                      type: string
+                      minLength: 1
+                    strSport:
+                      type: string
+                      minLength: 1
+                    idLeague:
+                      type: string
+                      minLength: 1
+                    strLeague:
+                      type: string
+                      minLength: 1
+                    strSeason:
+                      type: string
+                      minLength: 1
+                    strDescriptionEN:
+                      type: string
+                    strHomeTeam:
+                      type: string
+                      minLength: 1
+                    strAwayTeam:
+                      type: string
+                      minLength: 1
+                    intHomeScore:
+                      type: string
+                      minLength: 1
+                    intRound:
+                      type: string
+                      minLength: 1
+                    intAwayScore:
+                      type: string
+                      minLength: 1
+                    intSpectators:
+                      type: string
+                      minLength: 1
+                    strOfficial: {}
+                    strHomeGoalDetails: {}
+                    strHomeRedCards: {}
+                    strHomeYellowCards: {}
+                    strHomeLineupGoalkeeper: {}
+                    strHomeLineupDefense: {}
+                    strHomeLineupMidfield: {}
+                    strHomeLineupForward: {}
+                    strHomeLineupSubstitutes: {}
+                    strHomeFormation: {}
+                    strAwayRedCards: {}
+                    strAwayYellowCards: {}
+                    strAwayGoalDetails: {}
+                    strAwayLineupGoalkeeper: {}
+                    strAwayLineupDefense: {}
+                    strAwayLineupMidfield: {}
+                    strAwayLineupForward: {}
+                    strAwayLineupSubstitutes: {}
+                    strAwayFormation: {}
+                    intHomeShots: {}
+                    intAwayShots: {}
+                    strTimestamp: {}
+                    dateEvent:
+                      type: string
+                      minLength: 1
+                    dateEventLocal:
+                      type: string
+                      minLength: 1
+                    strDate: {}
+                    strTime:
+                      type: string
+                      minLength: 1
+                    strTimeLocal:
+                      type: string
+                    strTVStation: {}
+                    idHomeTeam:
+                      type: string
+                      minLength: 1
+                    idAwayTeam:
+                      type: string
+                      minLength: 1
+                    strResult:
+                      type: string
+                    strVenue: {}
+                    strCountry: {}
+                    strCity: {}
+                    strPoster: {}
+                    strFanart: {}
+                    strThumb: {}
+                    strBanner: {}
+                    strMap: {}
+                    strTweet1:
+                      type: string
+                    strTweet2:
+                      type: string
+                    strTweet3:
+                      type: string
+                    strVideo:
+                      type: string
+                      minLength: 1
+                    strStatus: {}
+                    strPostponed:
+                      type: string
+                      minLength: 1
+                    strLocked:
+                      type: string
+                      minLength: 1
+            required:
+              - event
+          examples:
+            Get Events Arsenal VS Chelsea:
+              event:
+                - idEvent: '679698'
+                  idSoccerXML: null
+                  idAPIfootball: null
+                  strEvent: Arsenal vs Chelsea
+                  strEventAlternate: Chelsea @ Arsenal
+                  strFilename: FA Cup 2017-05-27 Arsenal vs Chelsea
+                  strSport: Soccer
+                  idLeague: '4482'
+                  strLeague: FA Cup
+                  strSeason: 2016-2017
+                  strDescriptionEN: ''
+                  strHomeTeam: Arsenal
+                  strAwayTeam: Chelsea
+                  intHomeScore: '2'
+                  intRound: '200'
+                  intAwayScore: '1'
+                  intSpectators: '89472'
+                  strOfficial: null
+                  strHomeGoalDetails: null
+                  strHomeRedCards: null
+                  strHomeYellowCards: null
+                  strHomeLineupGoalkeeper: null
+                  strHomeLineupDefense: null
+                  strHomeLineupMidfield: null
+                  strHomeLineupForward: null
+                  strHomeLineupSubstitutes: null
+                  strHomeFormation: null
+                  strAwayRedCards: null
+                  strAwayYellowCards: null
+                  strAwayGoalDetails: null
+                  strAwayLineupGoalkeeper: null
+                  strAwayLineupDefense: null
+                  strAwayLineupMidfield: null
+                  strAwayLineupForward: null
+                  strAwayLineupSubstitutes: null
+                  strAwayFormation: null
+                  intHomeShots: null
+                  intAwayShots: null
+                  strTimestamp: null
+                  dateEvent: '2017-05-27'
+                  dateEventLocal: '2017-05-27'
+                  strDate: null
+                  strTime: '17:30:00'
+                  strTimeLocal: ''
+                  strTVStation: null
+                  idHomeTeam: '133604'
+                  idAwayTeam: '133610'
+                  strResult: ''
+                  strVenue: null
+                  strCountry: null
+                  strCity: null
+                  strPoster: null
+                  strFanart: null
+                  strThumb: null
+                  strBanner: null
+                  strMap: null
+                  strTweet1: ''
+                  strTweet2: ''
+                  strTweet3: ''
+                  strVideo: 'https://www.youtube.com/watch?v=OOkzIJ2Ge2M'
+                  strStatus: null
+                  strPostponed: 'no'
+                  strLocked: unlocked
+                - idEvent: '508788'
+                  idSoccerXML: '364310'
+                  idAPIfootball: null
+                  strEvent: Arsenal vs Chelsea
+                  strEventAlternate: Chelsea @ Arsenal
+                  strFilename: English Premier League 2016-09-24 Arsenal vs Chelsea
+                  strSport: Soccer
+                  idLeague: '4328'
+                  strLeague: English Premier League
+                  strSeason: 2016-2017
+                  strDescriptionEN: null
+                  strHomeTeam: Arsenal
+                  strAwayTeam: Chelsea
+                  intHomeScore: '3'
+                  intRound: '6'
+                  intAwayScore: '0'
+                  intSpectators: '0'
+                  strOfficial: null
+                  strHomeGoalDetails: '40'': Mesut Oezil;14'': Theo Walcott;11'': Alexis Sanchez;'
+                  strHomeRedCards: ''
+                  strHomeYellowCards: ''
+                  strHomeLineupGoalkeeper: Petr Cech
+                  strHomeLineupDefense: Nacho Monreal; Hector Bellerin; Shkodran Mustafi; Laurent Koscielny;
+                  strHomeLineupMidfield: Mesut Oezil; Alex Iwobi; Santi Cazorla; Francis Coquelin; Theo Walcott;
+                  strHomeLineupForward: Alexis Sanchez;
+                  strHomeLineupSubstitutes: Lucas Perez; Granit Xhaka; Olivier Giroud; Kieran Gibbs; Alex Oxlade-Chamberlain; David Ospina; Rob Holding;
+                  strHomeFormation: 4-2-3-1
+                  strAwayRedCards: ''
+                  strAwayYellowCards: '83'': Diego Costa;28'': Branislav Ivanovic;'
+                  strAwayGoalDetails: ''
+                  strAwayLineupGoalkeeper: Thibaut Courtois
+                  strAwayLineupDefense: Gary Cahill; David Luiz; Cesar Azpilicueta; Branislav Ivanovic;
+                  strAwayLineupMidfield: Willian; Cesc Fabregas; Eden Hazard; N'Golo Kante; Nemanja Matic;
+                  strAwayLineupForward: Diego Costa;
+                  strAwayLineupSubstitutes: Pedro Rodriguez; Victor Moses; Asmir Begovic; Michy Batshuayi; Marcos Alonso; Nathaniel Chalobah; Oscar;
+                  strAwayFormation: 4-2-3-1
+                  intHomeShots: '5'
+                  intAwayShots: '2'
+                  strTimestamp: null
+                  dateEvent: '2016-09-24'
+                  dateEventLocal: null
+                  strDate: 24/09/16
+                  strTime: '16:30:00+00:00'
+                  strTimeLocal: null
+                  strTVStation: null
+                  idHomeTeam: '133604'
+                  idAwayTeam: '133610'
+                  strResult: null
+                  strVenue: null
+                  strCountry: null
+                  strCity: null
+                  strPoster: null
+                  strFanart: null
+                  strThumb: null
+                  strBanner: null
+                  strMap: null
+                  strTweet1: null
+                  strTweet2: null
+                  strTweet3: null
+                  strVideo: null
+                  strStatus: null
+                  strPostponed: 'no'
+                  strLocked: unlocked
+      operationId: search-events
+      description: Search Sports Events by session and event name
+      parameters:
+        - type: string
+          in: query
+          name: e
+          description: 'Event Name. Example : e=Arsenal_vs_Chelsea'
+        - type: string
+          in: query
+          description: 'Session. Example : s=2016-2017'
+          name: s
+definitions: {}
+basePath: /sport-api
+securityDefinitions: {}

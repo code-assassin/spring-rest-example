@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "type": "item",
+      "title": "demo-api",
+      "uri": "docs/demo-api.md"
+    },
+    {
+      "type": "divider",
+      "title": "APIS"
+    },
+    {
+      "type": "item",
+      "title": "tsdb-apiv2.v1",
+      "uri": "reference/tsdb-apiv2.v1.yaml"
+    },
+    {
+      "type": "item",
+      "title": "the-sport-db",
+      "uri": "reference/tsdb.v1.yaml"
+    }
+  ]
+}
