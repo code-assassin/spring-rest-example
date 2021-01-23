@@ -1637,4 +1637,3 @@ paths:
           name: s
 definitions: {}
 basePath: /sport-api
-securityDefinitions: {}
