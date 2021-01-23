@@ -27,6 +27,10 @@ paths:
           description: Teams Found
           schema:
             description: ''
+            x-code-samples:
+              - lang: 'Shell'
+                source: |
+                  curl -vk "https://apiumbrella.example.com/sport-api/searchteams.php?t=Arsenal&api_key=<api-key>" 
             type: object
             properties:
               teams:
@@ -724,7 +728,11 @@ paths:
       operationId: search-all-leagues
       responses:
         '200':
-          description: OK
+          description: OK 
+          x-code-samples:
+            - lang: 'Shell'
+              source: |
+                curl -vk "https://apiumbrella.example.com/sport-api/search_all_leagues.php?c=England&s=Soccer&api_key=<api-key>" 
           schema:
             description: ''
             type: object
@@ -1315,7 +1323,11 @@ paths:
       tags: []
       responses:
         '200':
-          description: OK
+          description: OK 
+          x-code-samples:
+            - lang: 'Shell'
+              source: |
+                curl -vk "https://apiumbrella.example.com/sport-api/searchevents.php?e=Arsenal_vs_Chelsea&s=2016-2017&api_key=<api-key>" 
           schema:
             description: ''
             type: object
