@@ -714,21 +714,13 @@ paths:
           in: query
           name: t
           description: 'Team Name. Example : t=Arsenal'
-        - in: formData
-          type: string
-          name: t
-          description: Team Name
-        - in: formData
-          type: string
-          name: sname
-          description: 'Team Short Code '
         - type: string
           in: query
           name: sname
           description: 'Team Short Code. Example : sname=Ars'
   /search_all_leagues.php:
     get:
-      summary: ''
+      summary: Search All Leagues
       operationId: search-all-leagues
       responses:
         '200':
@@ -1308,14 +1300,14 @@ paths:
                   strLocked: unlocked
       description: Search leagues from All leagues data
       parameters:
-        - in: formData
-          type: string
-          name: c
+        - type: string
+          in: query
           description: 'Country. Example : c=England'
-        - in: formData
-          type: string
-          name: s
+          name: c
+        - type: string
+          in: query
           description: 'Sport. Example : s=Soccer'
+          name: s
     parameters: []
   /searchevents.php:
     get:
